@@ -1,0 +1,37 @@
+/* Custom default button */
+.btn-default,
+.btn-default:hover,
+.btn-default:focus {
+  background-color: transparent;
+}
+
+#lin {
+  background-image: url("../images/lin.png");
+  background-size: 150px 38px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: inherit;
+  height: 41px;
+  width: 159px;
+  border: 0px;
+}
+
+#git {
+  background-image: url("../images/git.png");
+  background-size: 125px 35px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: inherit;
+  height: 41px;
+  width: 159px;
+  border: 0px;
+}
+
+/*
+ * Base structure
+ */
+
+html,
+body {
+  background-color: #0FC7E6;
+}

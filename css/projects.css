@@ -1,0 +1,15 @@
+/* Custom default button */
+.btn-default,
+.btn-default:hover,
+.btn-default:focus {
+  background-color: white;
+}
+
+/*
+ * Base structure
+ */
+
+html,
+body {
+  background-color: #E6C70F;
+}
