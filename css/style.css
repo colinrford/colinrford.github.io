@@ -76,6 +76,7 @@ body {
 
 ul.icons {
 		cursor: default;
+    padding-left: 0;
 	}
 
 		ul.icons li {
