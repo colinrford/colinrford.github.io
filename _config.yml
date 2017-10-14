@@ -23,4 +23,5 @@ url: "https://colinford.com" # the base hostname & protocol for your site, e.g. 
 github_username: colinrford
 
 # Build settings
+exclude: ["README.md"]
 markdown: kramdown
