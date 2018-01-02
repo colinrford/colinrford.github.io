@@ -14,12 +14,20 @@ a:hover {
 	}
 
 /* Custom default button */
-.btn-default,
-.btn-default:hover,
-.btn-default:focus {
+.btn-default {
 	color: #333;
+	transition: all .2s ease-in-out;
 	text-shadow: none; /* Prevent inheritence from `body` */
 	border: 1px solid #fff;
+}
+
+.btn-default:hover,
+.btn-default:focus {
+	color: #fff;
+}
+
+.btn {
+	color: #333;
 }
 
 /*
@@ -146,6 +154,7 @@ ul.icons {
 	font-weight: bold;
 	color: #fff; /* IE8 proofing */
 	color: rgba(255,255,255,.75);
+	transition: all .2s ease-in-out;
 	border-bottom: 2px solid transparent;
 	-webkit-user-select: none;  /* Chrome all / Safari all */
 	-moz-user-select: none;     /* Firefox all */
@@ -155,13 +164,14 @@ ul.icons {
 .masthead-nav > li > a:hover,
 .masthead-nav > li > a:focus {
 	background-color: transparent;
-	border-bottom-color: rgba(255,255,255,.25);
+	color: rgba(0,0,0,0.55);
+	border-bottom-color: rgba(0,0,0,.25);
 }
 .masthead-nav > .active > a,
 .masthead-nav > .active > a:hover,
 .masthead-nav > .active > a:focus {
-	color: #fff;
-	border-bottom-color: #fff;
+	color: rgba(0,0,0,0.65);
+	border-bottom-color: #000;
 }
 
 @media (min-width: 768px) {
