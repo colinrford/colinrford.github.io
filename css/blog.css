@@ -11,5 +11,20 @@
 
 html,
 body {
-  background-color: #c8b8fa; /*#E60F3D;*/
+  background-color: #c8b8fa; /* #E60F3D; */
+}
+
+/*
+ * Adjust header & footer
+ */
+
+@media {
+	/* Set header and footer to static */ 
+	.masthead {
+		position: fixed;
+		background-color: #c8b8fa;
+	}
+	.mastfoot {
+		position: static;
+	}
 }

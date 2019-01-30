@@ -41,7 +41,7 @@ body {
 }
 body {
 	color: #fff;
-	text-align: center;
+	text-align: justify;
 	text-shadow: 0 1px 3px rgba(0,0,0,.1);}
 body {
 		background-attachment: scroll;
@@ -154,7 +154,7 @@ ul.icons {
 	font-weight: bold;
 	color: #fff; /* IE8 proofing */
 	color: rgba(255,255,255,.75);
-	transition: all .2s ease-in-out;
+	transition: all .25s ease-in-out;
 	border-bottom: 2px solid transparent;
 	-webkit-user-select: none;  /* Chrome all / Safari all */
 	-moz-user-select: none;     /* Firefox all */
@@ -165,13 +165,13 @@ ul.icons {
 .masthead-nav > li > a:focus {
 	background-color: transparent;
 	color: rgba(0,0,0,0.55);
-	border-bottom-color: rgba(0,0,0,.25);
+	/* border-bottom-color: rgba(0,0,0,.25); currently undecided on the fate of b-b-c */
 }
 .masthead-nav > .active > a,
 .masthead-nav > .active > a:hover,
 .masthead-nav > .active > a:focus {
 	color: rgba(0,0,0,0.65);
-	border-bottom-color: #000;
+	/* border-bottom-color: #000; */
 }
 
 @media (min-width: 768px) {
@@ -204,6 +204,7 @@ ul.icons {
 .mastfoot {
 	color: #999; /* IE8 proofing */
 	color: rgba(255,255,255,.5);
+	text-align: center;
 }
 
 
@@ -247,12 +248,13 @@ ul.icons {
 .bloggy {
   width: 100%;
   color: black;
-  background-color: #f2f2f2;
+  background-color: rgba(242, 242, 242, 0.75); /* #f2f2f2; */
   border-radius: .5em 1em;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-right: 25px;
-  padding-left: 25px;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  padding-right: 2em;
+  padding-left: 2em;
+  margin-top: auto;
   margin-right: auto;
   margin-left: auto;
   z-index: 3;
