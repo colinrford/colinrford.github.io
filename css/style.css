@@ -240,3 +240,20 @@ ul.icons {
 		width: 700px;
 	}
 }
+
+/*
+ * Testing
+ */
+.bloggy {
+  width: 100%;
+  color: black;
+  background-color: #f2f2f2;
+  border-radius: .5em 1em;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 25px;
+  padding-left: 25px;
+  margin-right: auto;
+  margin-left: auto;
+  z-index: 3;
+}
