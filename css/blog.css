@@ -28,3 +28,32 @@ body {
 		position: static;
 	}
 }
+
+.cover h1 {
+	margin-top: 2.5em;
+}
+
+.bloggy {
+  width: 49%;
+  height: 6em;
+  color: black;
+  background-color: rgba(242, 242, 242, 0.75); /* #f2f2f2; */
+  border-radius: .5em 1em;
+  display: inline-block;
+  padding-top: 0.1em;
+  padding-bottom: 0.1em;
+  padding-right: 2em;
+  padding-left: 2em;
+  margin-top: auto;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: auto;
+  z-index: 3;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.bloggy:focus, .bloggy:hover {
+	background-color: rgba(214, 214, 214, 0.75);
+}
+
