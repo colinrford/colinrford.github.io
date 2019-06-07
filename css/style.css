@@ -7,6 +7,7 @@ a,
 a:focus,
 a:hover {
 	color: #fff;
+	text-decoration: none;
 }
 
 	a.icon:hover {
@@ -83,15 +84,15 @@ body {
  */
 
 ul.icons {
-		cursor: default;
+	cursor: default;
     padding-left: 0;
-	}
+}
 
-		ul.icons li {
-			display: inline-block;
-			line-height: 1em;
-			padding-left: 1em;
-		}
+	ul.icons li {
+		display: inline-block;
+		line-height: 1em;
+		padding-left: 1em;
+	}
 
 /*
  * Icons

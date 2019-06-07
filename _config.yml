@@ -19,9 +19,20 @@ description: > # this means to ignore newlines until "baseurl:"
   Hi, I'm Colin and this is my personal site. 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://colinford.com" # the base hostname & protocol for your site, e.g. http://example.com
+#permalink: /:year/:month/:day/:title/
 
 github_username: colinrford
 
 # Build settings
-exclude: ["README.md"]
+exclude:
+  - README.md
+  - .DS-Store
+  - Gemfile
+  - Gemfile.lock
 markdown: kramdown
+plugins: 
+  - jekyll-paginate
+
+# Pagination
+paginate: 5
+paginate_path: "/blog/page-:num"
