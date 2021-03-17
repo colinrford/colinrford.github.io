@@ -65,18 +65,10 @@ GEM
       jekyll-theme-slate (= 0.1.1)
       jekyll-theme-tactile (= 0.1.1)
       jekyll-theme-time-machine (= 0.1.1)
-<<<<<<< HEAD
       jekyll-titles-from-headings (= 0.5.3)
       jemoji (= 0.11.1)
       kramdown (= 1.17.0)
       liquid (= 4.0.3)
-=======
-      jekyll-titles-from-headings (= 0.5.1)
-      jemoji (= 0.10.1)
-      kramdown (>= 2.3.0)
-      liquid (= 4.0.0)
-      listen (= 3.1.5)
->>>>>>> 713c11827aaf82ae4a8b7cf29300eca3048d7d48
       mercenary (~> 0.3)
       minima (= 2.5.1)
       nokogiri (>= 1.10.9, < 2.0)
