@@ -52,8 +52,9 @@ body {
 		-webkit-user-select: none;  /* Chrome all / Safari all */
 		-moz-user-select: none;     /* Firefox all */
 		-ms-user-select: none;      /* IE 10+ */
-		user-select: none;          /* Likely future */ 
+		user-select: none;          /* Likely future */
 }
+
 ::selection {
 	background-color: #fff;
 }
@@ -79,13 +80,13 @@ body {
 	padding: 30px;
 }
 
-/* 
+/*
  * List
  */
 
 ul.icons {
 	cursor: default;
-    padding-left: 0;
+  padding-left: 0;
 }
 
 	ul.icons li {
@@ -93,6 +94,10 @@ ul.icons {
 		line-height: 1em;
 		padding-left: 1em;
 	}
+
+ul btn:hover {
+	cursor: pointer;
+}
 
 /*
  * Icons
@@ -126,6 +131,19 @@ ul.icons {
 
 	}
 
+	.icon.fa-sun {
+		color: white;
+		text-decoration: none;
+	}
+
+		.icon.fa-sun:hover {
+			color: black;
+		}
+
+		.icon.fa-sun:active {
+
+		}
+
 
 /*
  * Header
@@ -139,7 +157,7 @@ ul.icons {
 	-webkit-user-select: none;  /* Chrome all / Safari all */
 	-moz-user-select: none;     /* Firefox all */
 	-ms-user-select: none;      /* IE 10+ */
-	user-select: none;          /* Likely future */ 
+	user-select: none;          /* Likely future */
 }
 
 .masthead-nav > li {
@@ -159,7 +177,7 @@ ul.icons {
 	-webkit-user-select: none;  /* Chrome all / Safari all */
 	-moz-user-select: none;     /* Firefox all */
 	-ms-user-select: none;      /* IE 10+ */
-	user-select: none;          /* Likely future */ 
+	user-select: none;          /* Likely future */
 }
 .masthead-nav > li > a:hover,
 .masthead-nav > li > a:focus {
@@ -180,6 +198,52 @@ ul.icons {
 		float: right;
 	}
 }
+
+
+/*
+ * dark theme
+ */
+
+ body.dark-theme {
+ 	color: #333;
+ }
+
+ 	body.dark-theme .icon {
+		color: black;
+	}
+
+	body.dark-theme .icon:hover {
+		color: white;
+	}
+
+	body.dark-theme .btn,
+	body.dark-theme .btn-default {
+		color: #fff;
+		background-color: #333;
+	}
+
+	body.dark-theme .btn-default:hover,
+	body.dark-theme .btn-default:focus {
+		color: #333;
+	}
+
+	body.dark-theme .masthead-brand > a {
+		color: black;
+	}
+	body.dark-theme .masthead-nav > li > a {
+		color: rgba(0,0,0,.75);
+	}
+
+	body.dark-theme .masthead-nav > li > a:hover,
+	body.dark-theme .masthead-nav > li > a:focus {
+		color: rgba(255,255,255,0.55);
+	}
+
+	body.dark-theme .masthead-nav > .active > a,
+	body.dark-theme .masthead-nav > .active > a:hover,
+	body.dark-theme .masthead-nav > .active > a:focus {
+		color: rgba(255,255,255,0.65);
+	}
 
 
 /*
@@ -204,7 +268,6 @@ ul.icons {
 	color: rgba(255,255,255,.5);
 	text-align: center;
 }
-
 
 /*
  * Affix and center

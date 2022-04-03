@@ -13,3 +13,7 @@ html,
 body {
   background-color: #4E4;
 }
+
+  body.dark-theme {
+    background-color: #269926;
+  }

@@ -14,12 +14,16 @@ body {
   background-color: #c8b8fa; /* #E60F3D; */
 }
 
+  body.dark-theme {
+    background-color: #966FD6;
+  }
+
 /*
  * Adjust header & footer
  */
 
 @media {
-	/* Set header and footer to static */ 
+	/* Set header and footer to static */
 	.masthead, .mastfoot {
 		position: fixed;
 		background-color: #c8b8fa;
@@ -30,6 +34,11 @@ body {
 	.mastfoot {
 		opacity: .75;
 	}
+
+  body.dark-theme .masthead,
+  body.dark-theme .mastfoot {
+    background-color: #966FD6;
+  }
 }
 
 .cover {
