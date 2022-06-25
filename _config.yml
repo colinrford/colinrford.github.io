@@ -6,7 +6,8 @@
 # feature for the data you need to update frequently.
 #
 # For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+# 'bundle exec jekyll serve'. If you change this file, please restart the server
+# process.
 
 # Site settings
 # These are used to personalize your new site. If you look in the HTML files,
@@ -16,10 +17,11 @@
 title: Colin
 email: your-email@domain.com
 description: > # this means to ignore newlines until "baseurl:"
-  Hi, I'm Colin and this is my personal site. 
+  Hi, I'm Colin and this is my personal site.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://colinford.com" # the base hostname & protocol for your site, e.g. http://example.com
-#permalink: /:year/:month/:day/:title/
+url: "https://colinford.com" # the base hostname & protocol for your site,
+                             # e.g. http://example.com
+permalink: none #/:year/:month/:day/:title/
 
 github_username: colinrford
 
@@ -30,7 +32,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
 markdown: kramdown
-plugins: 
+plugins:
   - jekyll-paginate
 
 # Pagination

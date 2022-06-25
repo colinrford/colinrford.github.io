@@ -1,11 +1,9 @@
-<div class="masthead clearfix">
-					<div class="inner">
-						<h3 class="masthead-brand"><a href="{% if page.title == 'index' %}{{ '' }}{% else %}{{ site.baseurl }}/index.html{% endif %}">Colin Ford</a></h3>
-						<ul class="nav masthead-nav">
-							<li{% if page.title == 'blog' %}{{ ' class="active"' }}{% else %}{{ '' }}{% endif %}><a href="{% if page.title == 'blog' %}{{ '' }}{% else %}{{ site.baseurl }}/blog/blog.html{% endif %}">blog</a></li>
-							<li{% if page.title == 'library' %}{{ ' class="active"' }}{% else %}{{ '' }}{% endif %}><a href="{% if page.title == 'library' %}{{ '' }}{% else %}{{ site.baseurl }}/library/library.html{% endif %}">library</a></li>
-							<li{% if page.title == 'projects' %}{{ ' class="active"' }}{% else %}{{ '' }}{% endif %}><a href="{% if page.title == 'projects' %}{{ '' }}{% else %}{{ site.baseurl }}/projects/projects.html{% endif %}">projects</a></li>
-							<li{% if page.title == 'about' %}{{ ' class="active"' }}{% else %}{{ '' }}{% endif %}><a href="{% if page.title == 'about' %}{{ '' }}{% else %}{{ site.baseurl }}/about/about.html{% endif %}">about</a></li>
-						</ul>
-					</div>
-				</div>
+<div class="nav masthead clearfix p-4 row container-fluid sticky-top">
+	<h3 class="masthead-brand ms-auto col col-lg-3 d-flex align-items-center justify-content-start"><a href="{% if page.title == 'index' %}{{ '' }}{% else %}{{ site.baseurl }}/index.html{% endif %}">Colin Ford</a></h3>
+	<ul class="masthead-nav me-auto col col-lg-3 d-flex align-items-center justify-content-end">
+		<li{% if page.title == 'blog' %}{{ ' class="active"' }}{% else %}{{ '' }}{% endif %}><a href="{% if page.title == 'blog' %}{{ '' }}{% else %}{{ site.baseurl }}/blog/blog.html{% endif %}">blog</a></li>
+		<li{% if page.title == 'library' %}{{ ' class="active"' }}{% else %}{{ '' }}{% endif %}><a href="{% if page.title == 'library' %}{{ '' }}{% else %}{{ site.baseurl }}/library/library.html{% endif %}">library</a></li>
+		<li{% if page.title == 'projects' %}{{ ' class="active"' }}{% else %}{{ '' }}{% endif %}><a href="{% if page.title == 'projects' %}{{ '' }}{% else %}{{ site.baseurl }}/projects/projects.html{% endif %}">projects</a></li>
+		<li{% if page.title == 'about' %}{{ ' class="active"' }}{% else %}{{ '' }}{% endif %}><a href="{% if page.title == 'about' %}{{ '' }}{% else %}{{ site.baseurl }}/about/about.html{% endif %}">about</a></li>
+	</ul>
+</div>

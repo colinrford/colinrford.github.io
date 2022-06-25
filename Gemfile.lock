@@ -93,7 +93,7 @@ GEM
       liquid (= 4.0.3)
       mercenary (~> 0.3)
       minima (= 2.5.1)
-      nokogiri (>= 1.13.4, < 2.0)
+      nokogiri (>= 1.12.5, < 2.0)
       rouge (= 3.26.0)
       terminal-table (~> 1.4)
     github-pages-health-check (1.17.9)
@@ -273,6 +273,7 @@ GEM
       unf_ext
     unf_ext (0.0.8.1)
     unicode-display_width (1.8.0)
+    webrick (1.7.0)
     zeitwerk (2.5.4)
 
 PLATFORMS
@@ -284,6 +285,7 @@ DEPENDENCIES
   jekyll-feed (~> 0.6)
   jekyll-paginate
   tzinfo-data
+  webrick (~> 1.7)
 
 RUBY VERSION
    ruby 2.7.1p83

@@ -8,17 +8,18 @@ a:focus,
 a:hover {
 	color: #fff;
 	text-decoration: none;
+	transition: all .25s ease-in-out;
 }
 
 	a.icon:hover {
 		text-decoration: none;
 	}
 
-/* Custom default button */
+/* custom default button */
 .btn-default {
 	color: #333;
-	transition: all .2s ease-in-out;
-	text-shadow: none; /* Prevent inheritence from `body` */
+	transition: all .25s ease-in-out;
+	text-shadow: none;
 	border: 1px solid #fff;
 }
 
@@ -43,41 +44,21 @@ body {
 body {
 	color: #fff;
 	text-align: justify !important;
-	text-shadow: 0 1px 3px rgba(0,0,0,.1);}
+	text-shadow: 0 1px 3px rgba(0,0,0,.1);
+	transition: all .25s ease-in-out;
+}
 body {
-		background-attachment: scroll;
-		background-size: 100%;
-		background-repeat: no-repeat;
-		/* -webkit-filter: blur(1px); blurs pic*/
-		-webkit-user-select: none;  /* Chrome all / Safari all */
-		-moz-user-select: none;     /* Firefox all */
-		-ms-user-select: none;      /* IE 10+ */
-		user-select: none;          /* Likely future */
+	background-attachment: scroll;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	-webkit-user-select: none;  /* Chrome all / Safari all */
+	-moz-user-select: none;     /* Firefox all */
+	-ms-user-select: none;      /* IE 10+ */
+	user-select: none;          /* Likely future */
 }
 
 ::selection {
 	background-color: #fff;
-}
-
-/* Extra markup and styles for table-esque vertical and horizontal centering */
-.site-wrapper {
-	display: table;
-	width: 100%;
-	height: 100%; /* at least for Firefox */
-	min-height: 100%;
-}
-.site-wrapper-inner {
-	display: table-cell;
-	vertical-align: top;
-}
-.cover-container {
-	margin-left: auto;
-	margin-right: auto;
-}
-
-/* Padding for spacing */
-.inner {
-	padding: 30px;
 }
 
 /*
@@ -105,18 +86,18 @@ ul btn:hover {
 
 .icon {
 	position: relative;
-	transition: all .2s ease-in;
+	transition: all .25s ease-in-out;
 	text-decoration: none;
 	font-size: x-large;
 }
 
 	.icon:before {
-			-moz-osx-font-smoothing: grayscale;
-			-webkit-font-smoothing: antialiased;
-			font-family: FontAwesome;
-			font-style: normal;
-			font-weight: normal;
-			text-transform: none !important;
+		-moz-osx-font-smoothing: grayscale;
+		-webkit-font-smoothing: antialiased;
+		font-family: FontAwesome;
+		font-style: normal;
+		font-weight: normal;
+		text-transform: none !important;
 	}
 
 	.icon:hover {
@@ -148,16 +129,19 @@ ul btn:hover {
 /*
  * Header
  */
-.masthead-brand {
-	margin-top: 10px;
-	margin-bottom: 10px;
-}
+
 .masthead-brand > a {
 	text-decoration: none;
 	-webkit-user-select: none;  /* Chrome all / Safari all */
 	-moz-user-select: none;     /* Firefox all */
 	-ms-user-select: none;      /* IE 10+ */
 	user-select: none;          /* Likely future */
+	transition: all .25s ease-in-out;
+}
+
+.masthead-nav > ul {
+	display: block;
+	text-align: right;
 }
 
 .masthead-nav > li {
@@ -171,7 +155,6 @@ ul btn:hover {
 	padding-right: 0;
 	font-size: 16px;
 	font-weight: bold;
-	color: #fff; /* IE8 proofing */
 	color: rgba(255,255,255,.75);
 	transition: all .25s ease-in-out;
 	-webkit-user-select: none;  /* Chrome all / Safari all */
@@ -190,15 +173,12 @@ ul btn:hover {
 	color: rgba(0,0,0,0.65);
 }
 
-@media (min-width: 768px) {
-	.masthead-brand {
-		float: left;
-	}
-	.masthead-nav {
-		float: right;
-	}
+.masthead-brand {
+	float: left;
 }
-
+.masthead-nav {
+	float: right;
+}
 
 /*
  * dark theme
@@ -253,7 +233,7 @@ ul btn:hover {
 .cover {
 	padding: 0 20px;
 }
-.cover .btn-lg {
+.btn-lg {
 	padding: 10px 20px;
 	font-weight: bold;
 }
@@ -264,41 +244,15 @@ ul btn:hover {
  */
 
 .mastfoot {
-	color: #999; /* IE8 proofing */
 	color: rgba(255,255,255,.5);
 	text-align: center;
+	transition: all .25s ease-in-out;
+	width: 100%;
 }
 
 /*
  * Affix and center
  */
-
-@media (min-width: 768px) {
-	/* Pull out the header and footer */
-	.masthead {
-		position: fixed;
-		top: 0;
-	}
-	.mastfoot {
-		position: fixed;
-		bottom: 0;
-	}
-	/* Start the vertical centering */
-	.site-wrapper-inner {
-		vertical-align: middle;
-	}
-	/* Handle the widths */
-	.masthead,
-	.mastfoot,
-	.cover-container {
-		width: 100%; /* Must be percentage or pixels for horizontal alignment */
-	}
-}
-
-@media (min-width: 992px) {
-	.masthead,
-	.mastfoot,
-	.cover-container {
-		width: 775px;
-	}
+.masthead {
+	transition: all .25s ease-in-out;
 }

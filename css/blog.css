@@ -9,9 +9,8 @@
  * Base structure
  */
 
-html,
 body {
-  background-color: #c8b8fa; /* #E60F3D; */
+  background-color: #C8B8FA; /* #E60F3D; */
 }
 
   body.dark-theme {
@@ -23,13 +22,11 @@ body {
  */
 
 @media {
-	/* Set header and footer to static */
 	.masthead, .mastfoot {
-		position: fixed;
 		background-color: #c8b8fa;
 	}
   .masthead {
-    opacity: .95;
+    opacity: .9;
   }
 	.mastfoot {
 		opacity: .75;
@@ -41,8 +38,27 @@ body {
   }
 }
 
-.cover {
+.cover-heading {
+  padding-left: 1.5em;
+  padding-top: 4em;
+}
 
+.list-unstyled {
+  background-color: transparent;
+  padding-top: 5em;
+}
+
+/*
+ *
+ *
+ *
+ */
+
+.scrollbar {
+  height: 100%;
+  background: transparent;
+  overflow-y: scroll;
+  /* margin-bottom: 25px; */
 }
 
 /*
@@ -101,4 +117,13 @@ body {
 
 .postprevlink > p  {
   margin: .75em 3em .75em 1.5em;
+}
+
+
+/*
+ * blog posts
+ */
+
+.blogpost {
+
 }

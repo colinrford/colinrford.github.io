@@ -1,22 +1,24 @@
 ---
-layout: page
+layout: blogpage
 title: blog
 ---
 
-<div class="inner cover row">
-	<div class="col-sm-3">
-					<h2 class="cover-heading">my blog</h2>
+<div class="row">
+	<!-- LHS -->
+	<div class="col-md-3">
+		<h2 class="cover-heading">my blog</h2>
 	</div>
-	<div class="col-sm-9">
-					<ul class="list-unstyled">
-						{% for post in site.posts %}
-						<li class="postprevbox">
-							<a class="postprevlink" href="{{ post.url | prepend: site.baseurl }}">
-								<h3>{{ post.title }}</h3>
-								<p class="lead">{{ post.excerpt | strip_html | truncatewords:30 }}</p>
-							</a>
-						</li>
-						{% endfor %}
-					</ul>
+	<!-- RHS -->
+	<div class="col-md-9 scrollbar">
+		<ul class="list-unstyled">
+			{% for post in site.posts %}
+			<li class="container postprevbox">
+				<a class="postprevlink" href="{{ post.url | prepend: site.baseurl }}">
+					<h3>{{ post.title }}</h3>
+					<p class="lead">{{ post.excerpt | strip_html | truncatewords:30 }}</p>
+				</a>
+			</li>
+			{% endfor %}
+		</ul>
 	</div>
-				</div>
+</div>
