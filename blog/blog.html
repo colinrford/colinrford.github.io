@@ -3,13 +3,15 @@ layout: blogpage
 title: blog
 ---
 
-<div class="row">
+<div class="row gx-2">
 	<!-- LHS -->
 	<div class="col-md-3">
-		<h2 class="cover-heading">my blog</h2>
+		<h2 class="cover-heading ms-5">my blog</h2>
+		{% for tag in site.tags %}
+		{% endfor %}
 	</div>
 	<!-- RHS -->
-	<div class="col-md-9 scrollbar">
+	<div class="col-md-6 mx-auto scrollbar">
 		<ul class="list-unstyled">
 			{% for post in site.posts %}
 			<li class="container postprevbox">

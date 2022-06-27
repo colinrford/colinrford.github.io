@@ -38,8 +38,13 @@ body {
   }
 }
 
+.btn-default {
+  background-color: rgba(242, 242, 242, 0.75);
+  border: none;
+}
+
 .cover-heading {
-  padding-left: 1.5em;
+  /*padding-left: 2.5em;*/
   padding-top: 4em;
 }
 
@@ -125,5 +130,17 @@ body {
  */
 
 .blogpost {
+  background-color: rgba(242, 242, 242, 0.75);
+  border-radius: .5em 1em;
+  color: black;
+  font-family: Times, serif;
+  padding: 1.5em;
+  transition: all .25s ease-in-out;
+}
 
+.blogtitle {
+  background-color: rgba(242, 242, 242, 0.75);
+  border-radius: .5em;
+  color: black;
+  margin
 }
