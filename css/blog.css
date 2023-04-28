@@ -43,8 +43,13 @@ body {
   border: none;
 }
 
-.cover-heading {
-  /*padding-left: 2.5em;*/
+  .btn-default:hover,
+  .btn-default:focus {
+    background-color: rgba(242, 242, 242, 0.75);
+    color: rgba(242, 242, 242, 0.75);
+  }
+
+.blog-heading {
   padding-top: 4em;
 }
 
@@ -133,7 +138,8 @@ body {
   background-color: rgba(242, 242, 242, 0.75);
   border-radius: .5em 1em;
   color: black;
-  font-family: Times, serif;
+  font-family: Garamond, Times, serif;
+  font-size: 17px;
   padding: 1.5em;
   transition: all .25s ease-in-out;
 }
@@ -142,5 +148,9 @@ body {
   background-color: rgba(242, 242, 242, 0.75);
   border-radius: .5em;
   color: black;
-  margin
+  font-family: Garamond, Times, serif;
 }
+
+  .blogtitle > h2 {
+    margin-bottom: 0;
+  }
