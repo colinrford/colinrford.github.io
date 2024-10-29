@@ -251,7 +251,7 @@ GEM
       unf_ext
     unf_ext (0.0.8.2)
     unicode-display_width (1.8.0)
-    webrick (1.8.1)
+    webrick (1.8.2)
 
 PLATFORMS
   ruby
@@ -262,7 +262,7 @@ DEPENDENCIES
   jekyll-feed (~> 0.6)
   jekyll-paginate
   tzinfo-data
-  webrick (~> 1.7)
+  webrick (~> 1.8)
 
 RUBY VERSION
    ruby 2.7.1p83
