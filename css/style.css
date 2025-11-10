@@ -51,10 +51,10 @@ body {
 	background-attachment: scroll;
 	background-size: 100%;
 	background-repeat: no-repeat;
-	-webkit-user-select: none;  /* Chrome all / Safari all */
-	-moz-user-select: none;     /* Firefox all */
-	-ms-user-select: none;      /* IE 10+ */
-	user-select: none;          /* Likely future */
+	/*-webkit-user-select: none;  /* Chrome all / Safari all */
+	/*-moz-user-select: none;     /* Firefox all */
+	/*-ms-user-select: none;      /* IE 10+ */
+	/*user-select: none;          /* Likely future */
 }
 
 ::selection {
@@ -125,6 +125,27 @@ ul btn:hover {
 
 		}
 
+	.svg-link {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-decoration: none;
+		width: 24px;
+		height: 24px;
+	}
+
+	.mpa-logo {
+		transform: translateY(4px);
+		transition: all .25s ease-in-out;
+		fill: white;
+		width: 100%;
+		height: 100%;
+	}
+
+		.mpa-logo:hover {
+			fill: black;
+		}
+
 
 /*
  * Header
@@ -132,10 +153,10 @@ ul btn:hover {
 
 .masthead-brand > a {
 	text-decoration: none;
-	-webkit-user-select: none;  /* Chrome all / Safari all */
-	-moz-user-select: none;     /* Firefox all */
-	-ms-user-select: none;      /* IE 10+ */
-	user-select: none;          /* Likely future */
+	/*-webkit-user-select: none;  /* Chrome all / Safari all */
+	/*-moz-user-select: none;     /* Firefox all */
+	/*-ms-user-select: none;      /* IE 10+ */
+	/*user-select: none;          /* Likely future */
 	transition: all .25s ease-in-out;
 }
 
@@ -157,10 +178,10 @@ ul btn:hover {
 	font-weight: bold;
 	color: rgba(255,255,255,.75);
 	transition: all .25s ease-in-out;
-	-webkit-user-select: none;  /* Chrome all / Safari all */
-	-moz-user-select: none;     /* Firefox all */
-	-ms-user-select: none;      /* IE 10+ */
-	user-select: none;          /* Likely future */
+	/*-webkit-user-select: none;  /* Chrome all / Safari all */
+	/*-moz-user-select: none;     /* Firefox all */
+	/*-ms-user-select: none;      /* IE 10+ */
+	/*user-select: none;          /* Likely future */
 }
 .masthead-nav > li > a:hover,
 .masthead-nav > li > a:focus {
@@ -223,6 +244,14 @@ ul btn:hover {
 	body.dark-theme .masthead-nav > .active > a:hover,
 	body.dark-theme .masthead-nav > .active > a:focus {
 		color: rgba(255,255,255,0.65);
+	}
+
+	body.dark-theme .mpa-logo {
+		fill: black;
+	}
+
+	body.dark-theme .mpa-logo:hover {
+		fill: white;
 	}
 
 

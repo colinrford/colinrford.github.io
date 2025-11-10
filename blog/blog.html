@@ -15,7 +15,7 @@ title: blog
 		<ul class="list-unstyled">
 			{% for post in site.posts %}
 			<li class="container postprevbox">
-				<a class="postprevlink" href="{{ post.url | prepend: site.baseurl }}">
+				<a class="postprevlink" href="{{ post.url }}">
 					<h3>{{ post.title }}</h3>
 					<p class="lead">{{ post.excerpt | strip_html | truncatewords:30 }}</p>
 				</a>
