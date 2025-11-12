@@ -1,9 +1,9 @@
 <div class="nav masthead clearfix p-4 row container-fluid sticky-top">
 	<h3 class="masthead-brand ms-auto col col-lg-3 d-flex align-items-center justify-content-start"><a href="{{ site.baseurl }}{% if page.title == 'index' %}{{ '' }}{% else %}{{ 'index.html' }}{% endif %}">Colin Ford</a></h3>
 	<ul class="masthead-nav me-auto col col-lg-3 d-flex align-items-center justify-content-end">
-		<li{% if page.title == 'blog' %}{{ ' class="active"' }}{% elsif page.layout == 'post' %}{{ ' class="active"'}}{% else %}{{ '' }}{% endif %}><a href="{% if page.title == 'blog' %}{{ '' }}{% else %}{{ 'blog/blog.html' | relative_url }}{% endif %}">blog</a></li>
-		<li{% if page.title == 'library' %}{{ ' class="active"' }}{% else %}{{ '' }}{% endif %}><a href="{% if page.title == 'library' %}{{ '' }}{% else %}{{ 'library/library.html' | relative_url }}{% endif %}">library</a></li>
-		<li{% if page.title == 'projects' %}{{ ' class="active"' }}{% else %}{{ '' }}{% endif %}><a href="{% if page.title == 'projects' %}{{ '' }}{% else %}{{ 'projects/projects.html' | relative_url }}{% endif %}">projects</a></li>
-		<li{% if page.title == 'about' %}{{ ' class="active"' }}{% else %}{{ '' }}{% endif %}><a href="{% if page.title == 'about' %}{{ '' }}{% else %}{{ 'about/about.html' | relative_url }}{% endif %}">about</a></li>
+		<li{% if page.title == 'blog' %}{{ ' class="active"' }}{% elsif page.layout == 'post' %}{{ ' class="active"'}}{% else %}{{ '' }}{% endif %}><a href="{% if page.title == 'blog' %}{{ '' }}{% else %}{{ 'blog/blog.html' | absolute_url }}{% endif %}">blog</a></li>
+		<li{% if page.title == 'library' %}{{ ' class="active"' }}{% else %}{{ '' }}{% endif %}><a href="{% if page.title == 'library' %}{{ '' }}{% else %}{{ 'library/library.html' | absolute_url }}{% endif %}">library</a></li>
+		<li{% if page.title == 'projects' %}{{ ' class="active"' }}{% else %}{{ '' }}{% endif %}><a href="{% if page.title == 'projects' %}{{ '' }}{% else %}{{ 'projects/projects.html' | absolute_url }}{% endif %}">projects</a></li>
+		<li{% if page.title == 'about' %}{{ ' class="active"' }}{% else %}{{ '' }}{% endif %}><a href="{% if page.title == 'about' %}{{ '' }}{% else %}{{ 'about/about.html' | absolute_url }}{% endif %}">about</a></li>
 	</ul>
 </div>
