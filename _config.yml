@@ -18,8 +18,9 @@ title: Colin
 email: your-email@domain.com
 description: > # this means to ignore newlines until "baseurl:"
   Hi, I'm Colin and this is my personal site.
-baseurl: "/" # the subpath of your site, e.g. /blog
-url: "https://colinford.com" # the base hostname & protocol for your site,
+domain: colinford.com
+baseurl: / # the subpath of your site, e.g. /blog
+url: https://colinford.com # the base hostname & protocol for your site,
                              # e.g. http://example.com
 permalink: none #/:year/:month/:day/:title/
 

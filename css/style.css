@@ -51,10 +51,6 @@ body {
 	background-attachment: scroll;
 	background-size: 100%;
 	background-repeat: no-repeat;
-	/*-webkit-user-select: none;  /* Chrome all / Safari all */
-	/*-moz-user-select: none;     /* Firefox all */
-	/*-ms-user-select: none;      /* IE 10+ */
-	/*user-select: none;          /* Likely future */
 }
 
 ::selection {
@@ -84,68 +80,58 @@ ul btn:hover {
  * Icons
  */
 
-.icon {
-	position: relative;
-	transition: all .25s ease-in-out;
+.svg-link {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	text-decoration: none;
-	font-size: x-large;
+	width: 30px;
+	height: 30px;
 }
 
-	.icon:before {
-		-moz-osx-font-smoothing: grayscale;
-		-webkit-font-smoothing: antialiased;
-		font-family: FontAwesome;
-		font-style: normal;
-		font-weight: normal;
-		text-transform: none !important;
+.mpa-logo {
+	transition: all .25s ease-in-out;
+	fill: white;
+	width: 100%;
+	height: 100%;
+}
+
+	.mpa-logo:hover {
+		fill: black;
 	}
 
-	.icon:hover {
-		color: black;
+.dm-svg {
+	transition: all .25s ease-in-out;
+	fill: white;
+	width: 100%;
+	height: 100%;
+}
+
+	.dm-svg:hover {
+		fill: black;
 	}
 
-	.icon.fa-github-alt {
+.gh-svg {
+	transition: all .25s ease-in-out;
+	fill: white;
+	width: 100%;
+	height: 100%;
+}
 
+	.gh-svg:hover {
+		fill: #24292f;
 	}
 
-	.icon.fa-linkedin {
+.li-svg {
+	transition: all .25s ease-in-out;
+	fill: white;
+	width: 100%;
+	height: 100%;
+}
 
+	.li-svg:hover {
+		fill: black;
 	}
-
-	.icon.fa-sun {
-		color: white;
-		text-decoration: none;
-	}
-
-		.icon.fa-sun:hover {
-			color: black;
-		}
-
-		.icon.fa-sun:active {
-
-		}
-
-	.svg-link {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		text-decoration: none;
-		width: 24px;
-		height: 24px;
-	}
-
-	.mpa-logo {
-		transform: translateY(4px);
-		transition: all .25s ease-in-out;
-		fill: white;
-		width: 100%;
-		height: 100%;
-	}
-
-		.mpa-logo:hover {
-			fill: black;
-		}
-
 
 /*
  * Header
@@ -153,10 +139,6 @@ ul btn:hover {
 
 .masthead-brand > a {
 	text-decoration: none;
-	/*-webkit-user-select: none;  /* Chrome all / Safari all */
-	/*-moz-user-select: none;     /* Firefox all */
-	/*-ms-user-select: none;      /* IE 10+ */
-	/*user-select: none;          /* Likely future */
 	transition: all .25s ease-in-out;
 }
 
@@ -178,10 +160,6 @@ ul btn:hover {
 	font-weight: bold;
 	color: rgba(255,255,255,.75);
 	transition: all .25s ease-in-out;
-	/*-webkit-user-select: none;  /* Chrome all / Safari all */
-	/*-moz-user-select: none;     /* Firefox all */
-	/*-ms-user-select: none;      /* IE 10+ */
-	/*user-select: none;          /* Likely future */
 }
 .masthead-nav > li > a:hover,
 .masthead-nav > li > a:focus {
@@ -246,11 +224,20 @@ ul btn:hover {
 		color: rgba(255,255,255,0.65);
 	}
 
-	body.dark-theme .mpa-logo {
+	body.dark-theme .dm-svg,
+	body.dark-theme .mpa-logo,
+	body.dark-theme .li-svg {
 		fill: black;
 	}
 
-	body.dark-theme .mpa-logo:hover {
+	body.dark-theme .gh-svg {
+		fill: #24292f;
+	}
+
+	body.dark-theme .dm-svg:hover,
+	body.dark-theme .mpa-logo:hover,
+	body.dark-theme .gh-svg:hover,
+	body.dark-theme .li-svg:hover {
 		fill: white;
 	}
 

@@ -3,29 +3,27 @@
 	<title>{% if page.title == "index" %}{{ site.title }}{% elsif page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
 	<meta charset="UTF-8"/>
 	<meta name="description" content="{{ site.description }}"/>
-	<!-- start MathJax -->
-	<script>
-		MathJax = {
-		  tex: {
-		    inlineMath: [['$', '$'], ['\\(', '\\)']]
-		  }
-		};
-	</script> <!-- http://docs.mathjax.org/en/latest/web/start.html?highlight=inline#configuring-mathjax -->
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6" crossorigin="anonymous"></script>
-	<script id="MathJax-script" async src="/js/mathjax/es5/tex-chtml.js" crossorigin="anonymous"></script>
-	<!-- end MathJax -->
-	<script src="{{ site.baseurl }}js/dark-mode.js"></script> <!-- my current lousy dark mode -->
-	<!-- start FontAwesome -->
-	<script src="https://kit.fontawesome.com/8f49a1ab3f.js" crossorigin="anonymous"></script>
-	<link rel="stylesheet", href="/css/fontawesome.min.css", integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7", crossorigin="anonymous">
-	<!-- end FontAwesome // start Bootstrap -->
-	<script src="{{ site.baseurl }}js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-	<link rel="stylesheet" href="{{ site.baseurl }}css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-	<script src="{{ site.baseurl }}js/tooltips.js"></script> <!-- script for enabling tooltips -->
+	{% if use_mathjax %}
+		<!-- start MathJax -->
+		<script>
+			MathJax = {
+			  tex: {
+			    inlineMath: [['$', '$'], ['\\(', '\\)']]
+			  }
+			};
+		</script> <!-- http://docs.mathjax.org/en/latest/web/start.html?highlight=inline#configuring-mathjax -->
+		<script id="MathJax-script" async src="{{ '/js/mathjax/tex-mml-chtml.js' | relative_url }}"></script>
+		<!-- end MathJax -->
+	{% endif %}
+	<script src="{{ 'js/dark-mode.js' | relative_url }}"></script> <!-- my current lousy dark mode -->
+	<!-- start Bootstrap -->
+	<script src="{{ site.baseurl }}{{ 'js/bootstrap.bundle.min.js' }}" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"></script>
+	<link rel="stylesheet" href="{{ site.baseurl }}{{ 'css/bootstrap.min.css' }}" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"/>
+	<script src="{{ site.baseurl }}{{ 'js/tooltips.js' }}"></script> <!-- script for enabling tooltips -->
 	<!-- end Bootstrap -->
-	<link rel="stylesheet" href="{{ site.baseurl }}css/style.css" />
-	<link rel="stylesheet" href="{{ site.baseurl }}css/{% if page.layout == 'post' %}blog{% else %}{{ page.title }}{% endif %}.css" />
-	<link rel="icon" href="/assets/images/{% if page.layout == "post" %}blog{% else %}{{ page.title }}{% endif %}.ico"/>
+	<link rel="stylesheet" href="{{ site.baseurl }}{{ 'css/style.css' }}" />
+	<link rel="stylesheet" href="{{ site.baseurl }}{{ 'css/' }}{% if page.layout == 'post' %}blog{% else %}{{ page.title }}{% endif %}{{ '.css' }}" />
+	<link rel="icon" href="{{ '/assets/images/' }}{% if page.layout == "post" %}blog{% else %}{{ page.title }}{% endif %}.ico"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
 	<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
