@@ -12,17 +12,17 @@
 			  }
 			};
 		</script> <!-- http://docs.mathjax.org/en/latest/web/start.html?highlight=inline#configuring-mathjax -->
-		<script id="MathJax-script" async src="{{ site.baseurl }}{{ 'js/mathjax/tex-mml-chtml.js' }}"></script>
+		<script id="MathJax-script" async src="{{ 'js/mathjax/tex-mml-chtml.js' | relative_url }}"></script>
 		<!-- end MathJax -->
 	{% endif %}
-	<script src="{{ site.baseurl }}{{ 'js/dark-mode.js' }}"></script> <!-- my current lousy dark mode -->
+	<script src="{{ 'js/dark-mode.js' | relative_url }}"></script> <!-- my current lousy dark mode -->
 	<!-- start Bootstrap -->
-	<link rel="stylesheet" href="{{ site.baseurl }}{{ 'css/bootstrap.min.css' }}" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"/>
-	<script src="{{ site.baseurl }}{{ 'js/bootstrap.bundle.min.js' }}" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"></script>
-	<script src="{{ site.baseurl }}{{ 'js/tooltips.js' }}"></script> <!-- script for enabling tooltips -->
+	<link rel="stylesheet" href="{{ 'css/bootstrap.min.css' | relative_url }}" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"/>
+	<script src="{{ 'js/bootstrap.bundle.min.js' | relative_url }}" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"></script>
+	<script src="{{ 'js/tooltips.js' | relative_url }}"></script> <!-- script for enabling tooltips -->
 	<!-- end Bootstrap -->
-	<link rel="stylesheet" href="{{ site.baseurl }}{{ 'css/style.css' }}" />
-	<link rel="stylesheet" href="{{ site.baseurl }}{{ 'css/' }}{% if page.layout == 'post' %}{{ 'blog' }}{% else %}{{ page.title }}{% endif %}{{ '.css' }}" />
+	<link rel="stylesheet" href="{{ 'css/style.css' | relative_url }}" />
+	<link rel="stylesheet" href="{{ 'css/' | relative_url }}{% if page.layout == 'post' %}{{ 'blog' }}{% else %}{{ page.title }}{% endif %}{{ '.css' }}" />
 	<link rel="icon" href="{{ '/assets/images/' }}{% if page.layout == "post" %}{{ 'blog' }}{% else %}{{ page.title }}{% endif %}{{ '.ico' }}"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
