@@ -18,12 +18,12 @@
 	<script src="{{ 'js/dark-mode.js' | absolute_url }}"></script> <!-- my current lousy dark mode -->
 	<!-- start Bootstrap -->
 	<script src="{{ 'js/bootstrap.bundle.min.js' | absolute_url }}" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"></script>
-	<link rel="stylesheet" href="{{ site.baseurl }}{{ 'css/bootstrap.min.css' }}" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"/>
-	<script src="{{ site.baseurl }}{{ 'js/tooltips.js' }}"></script> <!-- script for enabling tooltips -->
+	<link rel="stylesheet" href="{{ 'css/bootstrap.min.css' | absolute_url }}" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"/>
+	<script src="{{ 'js/tooltips.js' | absolute_url }}"></script> <!-- script for enabling tooltips -->
 	<!-- end Bootstrap -->
-	<link rel="stylesheet" href="{{ site.baseurl }}{{ 'css/style.css' }}" />
-	<link rel="stylesheet" href="{{ site.baseurl }}{{ 'css/' }}{% if page.layout == 'post' %}blog{% else %}{{ page.title }}{% endif %}{{ '.css' }}" />
-	<link rel="icon" href="{{ '/assets/images/' }}{% if page.layout == "post" %}{{ 'blog' }}{% else %}{{ page.title }}{% endif %}.ico"/>
+	<link rel="stylesheet" href="{{ 'css/style.css' | absolute_url }}" />
+	<link rel="stylesheet" href="{{ 'css/' | absolute_url }}{% if page.layout == 'post' %}{{ 'blog' }}{% else %}{{ page.title }}{% endif %}{{ '.css' }}" />
+	<link rel="icon" href="{{ '/assets/images/' }}{% if page.layout == "post" %}{{ 'blog' }}{% else %}{{ page.title }}{% endif %}{{ '.ico' }}"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
 	<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
