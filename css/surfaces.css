@@ -1,0 +1,92 @@
+/*
+ * Surfaces Page Styles
+ */
+
+body {
+  background-color: #1a1a1a;
+  background-image: none;
+  color: #fff;
+  /* White text for light mode */
+}
+
+body.dark-theme {
+  background-color: #1a1a1a;
+  color: #00FF41;
+  /* Matrix green for dark mode */
+}
+
+/* Dark mode - header/nav/footer all matrix green */
+body.dark-theme .masthead-brand>a,
+body.dark-theme .masthead-nav>li>a,
+body.dark-theme .mastfoot,
+body.dark-theme .mastfoot p {
+  color: #00FF41;
+}
+
+body.dark-theme .masthead-nav>li>a:hover,
+body.dark-theme .masthead-nav>li>a:focus {
+  color: #00FF41;
+  opacity: 0.7;
+}
+
+/* Dark mode icons */
+body.dark-theme .dm-svg,
+body.dark-theme .mpa-logo,
+body.dark-theme .gh-svg,
+body.dark-theme .li-svg {
+  fill: #00FF41;
+}
+
+body.dark-theme .dm-svg:hover,
+body.dark-theme .mpa-logo:hover,
+body.dark-theme .gh-svg:hover,
+body.dark-theme .li-svg:hover {
+  fill: #fff;
+}
+
+h2,
+h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+/* Content list styling - more specific selector */
+.col ul {
+  text-align: left;
+  margin-left: 1rem;
+}
+
+.col ul li {
+  margin-bottom: 0.5rem;
+}
+
+/* Button styling for dark background */
+.btn-default {
+  color: #fff;
+  background-color: transparent;
+  border-color: #fff;
+}
+
+.btn-default:hover,
+.btn-default:focus {
+  color: #1a1a1a;
+  background-color: #fff;
+}
+
+/* Dark mode button - matrix green */
+body.dark-theme .btn-default {
+  color: #00FF41;
+  border-color: #00FF41;
+}
+
+body.dark-theme .btn-default:hover,
+body.dark-theme .btn-default:focus {
+  color: #1a1a1a;
+  background-color: #00FF41;
+}
+
+/* Reset footer icons list (undo content ul styling) */
+.mastfoot ul.icons {
+  text-align: center;
+  margin-left: 0;
+}
