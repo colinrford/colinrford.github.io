@@ -112,3 +112,20 @@ body.dark-theme .btn-default:focus {
   text-align: center;
   margin-left: 0;
 }
+
+/* App Store Link Styling */
+.app-store-link {
+  text-decoration: none;
+  display: flex;
+  cursor: default !important;
+}
+
+.app-store-link img {
+  height: 40px;
+  cursor: default !important;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.app-store-link:hover {
+  opacity: 0.8;
+}
