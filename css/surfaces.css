@@ -117,12 +117,12 @@ body.dark-theme .btn-default:focus {
 .app-store-link {
   text-decoration: none;
   display: flex;
-  cursor: default !important;
+  cursor: pointer !important;
 }
 
 .app-store-link img {
   height: 40px;
-  cursor: default !important;
+  cursor: pointer !important;
   transition: opacity 0.2s ease-in-out;
 }
 
