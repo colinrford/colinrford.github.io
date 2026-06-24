@@ -146,14 +146,91 @@ body {
 
 .blogtitle {
   background-color: rgba(242, 242, 242, 0.75);
-  border-radius: .5em;
+  border-radius: .5em 1em;
   color: black;
   font-family: Garamond, Times, serif;
+  padding: 1em 1.5em;
 }
 
   .blogtitle > h2 {
+    margin-bottom: .15em;
+  }
+
+  .blogtitle .postdate {
     margin-bottom: 0;
   }
+
+/*
+ * table of contents (kramdown {:toc} emits <ul id="markdown-toc">)
+ * add to a post's markdown where you want it:
+ *     * TOC
+ *     {:toc}
+ */
+.blogpost #markdown-toc {
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(0, 0, 0, .12);
+  border-radius: .5em 1em;
+  padding: .75em 1em .75em 2em;
+  margin: 0 0 1.5em;
+  font-size: .95em;
+}
+
+  .blogpost #markdown-toc::before {
+    content: "Contents";
+    display: block;
+    margin: 0 0 .35em -1em;
+    font-weight: 700;
+    font-variant: small-caps;
+    letter-spacing: .03em;
+  }
+
+  .blogpost #markdown-toc ul {
+    margin: .2em 0 .2em 1.1em;
+  }
+
+  .blogpost #markdown-toc li {
+    margin: .15em 0;
+  }
+
+/*
+ * post-body links: the global rule sets links to #fff (for the dark page
+ * background), which is invisible inside the light post box. Override to a
+ * readable accent that works in both light and dark mode.
+ */
+.blogpost a,
+.blogpost a:focus {
+  color: #5e3aa1;
+  text-decoration: underline;
+}
+
+  .blogpost a:hover {
+    color: #7e57c2;
+    text-decoration: underline;
+  }
+
+/* TOC entries: keep them clean (no underline until hover) */
+.blogpost #markdown-toc a {
+  text-decoration: none;
+}
+
+  .blogpost #markdown-toc a:hover,
+  .blogpost #markdown-toc a:focus {
+    text-decoration: underline;
+  }
+
+/*
+ * offset anchor jumps so the sticky-top masthead doesn't cover the heading
+ * you jumped to (e.g. clicking a TOC entry). Tune to ~masthead height.
+ */
+.blogpost h1,
+.blogpost h2,
+.blogpost h3,
+.blogpost h4,
+.blogpost h5,
+.blogpost h6,
+#top {
+  scroll-margin-top: 6rem;
+}
 
 /*
  * result / answer highlight
@@ -175,4 +252,19 @@ body {
 
 .blogpost .postdate {
   margin-bottom: 1.25em;
+}
+
+/*
+ * smooth scrolling for in-page anchors (TOC entries, the "back to top" link).
+ * pure CSS, no JS. only loaded on post pages (blog.css), and disabled for
+ * visitors who prefer reduced motion.
+ */
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }

@@ -5,22 +5,25 @@
 	<body style="">
 		<div class="container-fluid">
 			{% include masthead.html %}
-			<div class="row container-fluid gx-3 justify-content-center mt-1 mb-3">
-				<div class="col-3">
+			<div id="top" class="row container justify-content-center mx-auto mt-1 mb-3">
+				<div class="col col-lg-7">
 					<a class="btn btn-default btn-lg" href="{{ 'blog/' | relative_url }}" role="button">back to blog</a>
 				</div>
-				<div class="col-3 blogtitle d-flex align-items-center justify-content-end">
+			</div>
+			<div class="row container justify-content-center mx-auto mb-4">
+				<div class="blogtitle col col-lg-7">
 					<h2>{{ page.title }}</h2>
+					<p class="postdate">{{ page.date | date: "%B %-d, %Y" }}</p>
 				</div>
 			</div>
-			{% for tags in page.tags %}
-			<div class="">
-			</div>
-			{% endfor %}
-			<div class="row container justify-content-center my-5 mx-auto">
+			<div class="row container justify-content-center mb-4 mx-auto">
 				<div class="blogpost col col-lg-7">
-					<p class="postdate">{{ page.date | date: "%B %-d, %Y" }}</p>
 					{{ content }}
+				</div>
+			</div>
+			<div class="row container justify-content-center mx-auto mb-5">
+				<div class="col col-lg-7 text-end">
+					<a class="btn btn-default btn-lg" href="#top" role="button">back to top &uarr;</a>
 				</div>
 			</div>
 			{% include mastfoot.html %}

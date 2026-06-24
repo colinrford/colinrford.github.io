@@ -4,9 +4,15 @@ title: "An introduction to getting carried away"
 date: 2026-06-24
 use_mathjax: true
 ---
+### Take my hand
 I began writing a post about my experience rendering weak gravitational lensing about a Schwarzschild black hole, and ended up getting carried away. In this post, I'm going to introduce some jargon and blah blah that the interested reader may find useful when reading the imminent(!!!) *carried away* follow up posts.
 
+* TOC
+{:toc}
+
 In physics, particularly general relativity (GR), we often use the term *spacetime* and can communicate quite a bit of information through laundering symbols with terminology; i.e. spacetime is sort of a slang term for the spacetime metric, which is to say, how one measures distances and elapsed times. We are now at a point where I reluctantly choose to disappoint some mathematicians by hiding some magic behind the curtains (the rabbit was always in the hat!).
+
+#### Relativity "is" geometry
 
 In special relativity (SR), Einstein proposed (try to prove him wrong 😉) the universe has a speed limit, $c$, and light travels at this exact(ish) speed limit $c$ in massless packets. There is a thing called the *interval* often written in the form
 
@@ -18,7 +24,7 @@ $$\eta_{\mu \nu} = \begin{pmatrix} -c & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 
 
 Pretty cool, right? So, for our purposes, let's choose the $\eta_{\mu \nu}$ on the left as our convention and move along. Note the interval (or *line element*) $ds^2$ above is the *Minkowski interval*; we see many different $ds^2$ in GR.
 
-Suppose we live in a 3+1 dimensional spacetime and are interested in understanding it more *deeply* on a fundamental level. Three plus one refers to three dimensions of space, $x$, $y$, $z$, and one dimension of time $t$, and the four of these variables are typically ordered with time first, followed by space, and mathematically we express this as a column vector
+Suppose we live in a $3+1$ dimensional spacetime and are interested in understanding it more *deeply* on a fundamental level. Three plus one refers to three dimensions of space, $x$, $y$, $z$, and one dimension of time $t$, and the four of these variables are typically ordered with time first, followed by space, and mathematically we express this as a column vector
 
 $$\begin{pmatrix} t \\ x \\ y \\ z \end{pmatrix}$$
 
@@ -26,16 +32,19 @@ and frequently denoted by $x^\mu$ where the Greek letter $\mu$ is *not a power*,
 
 Expressing things in terms of matrices and vectors will become more important when we actually attempt to do some numerical relativity. For the moment, let's just get comfortable reading this notation: for $\eta_{\mu \nu}$, we see when the indices $\mu \neq \nu$ that $\eta_{\mu \nu} = 0$, but when $\mu = \nu$, $\eta_{\mu \mu} = \mp 1$. Concretely, $\eta_{0 0} = -1$ but $\eta_{0 1} = \eta_{1 0} = 0$. For the 4-vector, $x^0 = t$, $x^1 = x$, and so on.
 
+#### The Schwarzschild metric
+
 The line element we are going to be focusing on is the Schwarzschild one, given by
 
-$$ds^2 = - f(r) dt^2 + \dfrac{dr^2}{f(r)} + r^2(d\theta^2 + \sin^2{\theta} \, d\varphi^2) \tag{2}$$
+$$ds^2 = - f(r) c^2 dt^2 + \dfrac{dr^2}{f(r)} + r^2(d\theta^2 + \sin^2{\theta} \, d\varphi^2) \tag{2}$$
 
 which in matrix form $g_{\mu \nu}$ is diagonal
 
-$$g_{\mu \nu} = \begin{pmatrix} - f(r) & 0 & 0 & 0 \\ 0 & \dfrac{1}{f(r)} & 0 & 0 \\ 0 & 0 & r^2 & 0 \\ 0 & 0 & 0 & r^2 \sin^2{\theta} \end{pmatrix} \tag{3}$$
+$$g_{\mu \nu} = \begin{pmatrix} - f(r) c^2 & 0 & 0 & 0 \\ 0 & \dfrac{1}{f(r)} & 0 & 0 \\ 0 & 0 & r^2 & 0 \\ 0 & 0 & 0 & r^2 \sin^2{\theta} \end{pmatrix} \tag{3}$$
 
 and where $f(r) = 1 - r_s / r$, with $r_s$ denoting the mass-dependent *Schwarzschild radius*, at which there is a coordinate singularity. Metrics like this are where and when we really start practicing some GR, because unlike with the Minkowski metric the Schwarzschild metric is measuring time and space a bit differently depending on this radius $r$, which in this setting is the distance to the center of the massive object in question. For $r > r_s$, as $r$ approaches $r_s$, can you convince yourself this predicts for this metric that time ought to slow down for clocks at closer and closer distances, compared to clocks further out?
 
+#### Christoffel symbols for the Schwarzschild metric
 We'll wrap up this post with writing down the *Christoffel symbols* $\Gamma_{\mu \nu}^\lambda$ associated to the Schwarzschild metric $g_{\mu \nu}$, which we will need to perform various computations later on. The Christoffel symbols are also called *connection coefficients*, and are nontrivial in curved space(time)s. In general, they are
 
 $$\Gamma_{\mu \nu}^\lambda = \frac{1}{2} g^{\lambda \sigma} (\partial_\mu g_{\nu \sigma} + \partial_\nu g_{\sigma \mu} - \partial_\sigma g_{\mu \nu}) \tag{4}$$
@@ -76,7 +85,7 @@ __NOTE__: The identities written here are for $\mu \neq \nu \neq \lambda$, and r
 
 So we have $13$ non-vanishing symbols left to compute. Let's list them out:
 
-$$\begin{align*} \Gamma_{\mu \mu}^r &= - \frac{1}{2} \left( g_{r r} \right)^{-1} \partial_r g_{\mu \mu} = \begin{cases} \color{#5e3aa1}{\dfrac{f(r) f'(r)}{2}} {,} &\quad \mu = t \\ \color{#5e3aa1}{- r f(r)} {,} &\quad \mu = \theta \\ \color{#5e3aa1}{- r \sin^2{\theta} f(r)} {,} &\quad \mu = \varphi \end{cases} \\
+$$\begin{align*} \Gamma_{\mu \mu}^r &= - \frac{1}{2} \left( g_{r r} \right)^{-1} \partial_r g_{\mu \mu} = \begin{cases} \color{#5e3aa1}{\dfrac{f(r) f'(r) c^2}{2}} {,} &\quad \mu = t \\ \color{#5e3aa1}{- r f(r)} {,} &\quad \mu = \theta \\ \color{#5e3aa1}{- r \sin^2{\theta} f(r)} {,} &\quad \mu = \varphi \end{cases} \\
 \Gamma_{\varphi \varphi}^\theta &= - \frac{1}{2} \left( g_{\theta \theta} \right)^{-1} \partial_\theta g_{\varphi \varphi} = \color{#5e3aa1}{-\sin{\theta} \cos{\theta}} \\
 \Gamma_{\theta \varphi}^\theta &= \Gamma_{\varphi \theta}^\theta = \partial_\theta \left( \ln{\sqrt{|g_{\varphi \varphi}|}} \right) = \color{#5e3aa1}{\cot{\theta}} \\
 \Gamma_{r \lambda}^\lambda &= \Gamma_{\lambda r}^\lambda = \partial_r \left( \ln{\sqrt{|g_{\lambda \lambda}|}} \right) = \begin{cases} \color{#5e3aa1}{\dfrac{\partial_r |f(r)|}{2 |f(r)|}} {,} &\quad \lambda = t \\ \color{#5e3aa1}{\dfrac{1}{r}} {,} &\quad \lambda = \theta \\ \color{#5e3aa1}{\dfrac{1}{r}} {,} &\quad \lambda = \varphi \end{cases} \\
