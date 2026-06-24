@@ -85,3 +85,6 @@ $$\begin{align*} \Gamma_{\mu \mu}^r &= - \frac{1}{2} \left( g_{r r} \right)^{-1}
 If we restrict ourselves to $r > r_s$, then $f(r)$ is manifestly positive and we can drop the absolute value signs in order to simplify computations a little bit.
 
 In the next entry in getting carried away, we'll use these computed Christoffel symbols to work out the geodesic equations.
+
+### Reference(s)
+Really, any textbook on GR should cover this, such as *Sean Carroll's Spacetime and Relativity*.
