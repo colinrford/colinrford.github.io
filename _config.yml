@@ -29,7 +29,7 @@ github_username: colinrford
 # Build settings
 exclude:
   - README.md
-  - .DS-Store
+  - .DS_Store
   - Gemfile
   - Gemfile.lock
 markdown: kramdown
