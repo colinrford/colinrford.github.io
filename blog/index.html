@@ -17,6 +17,7 @@ title: blog
 			<li class="container postprevbox">
 				<a class="postprevlink" href="{{ post.url }}">
 					<h3>{{ post.title }}</h3>
+						<p class="postdate">{{ post.date | date: "%B %-d, %Y" }}</p>
 					<p class="lead">{{ post.excerpt | strip_html | truncatewords:30 }}</p>
 				</a>
 			</li>

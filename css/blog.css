@@ -154,3 +154,25 @@ body {
   .blogtitle > h2 {
     margin-bottom: 0;
   }
+
+/*
+ * result / answer highlight
+ * use inline:   the answer is <span class="result">42</span>
+ * or per-block: put `{:.result}` on its own line after a paragraph
+ */
+.blogpost .result {
+  color: #5e3aa1;
+  font-weight: 700;
+}
+
+/* post date — used on previews and at the top of a post */
+.postdate {
+  font-size: .85em;
+  font-style: italic;
+  opacity: .7;
+  margin: 0 0 .5em;
+}
+
+.blogpost .postdate {
+  margin-bottom: 1.25em;
+}
