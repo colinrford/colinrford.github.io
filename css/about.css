@@ -15,4 +15,16 @@ body {
 
   body.dark-theme {
     background-color: #C23B23;
+    color: #FFF8DC;
   }
+
+body p a,
+body p a:focus {
+  color: #FFFF66;
+  text-decoration: none;
+}
+
+body p a:hover {
+  color: #FFFF66;
+  text-decoration: underline;
+}
