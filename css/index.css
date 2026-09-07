@@ -11,8 +11,21 @@
 
 body {
   background-color: #0FC7E6;
+  color: #0A2A33;
 }
 
   body.dark-theme {
     background-color: #779ECB;
+    color: #0A2A33;
   }
+
+.home a,
+.home a:focus {
+  color: #5C0A1E;
+  text-decoration: none;
+}
+
+.home a:hover {
+  color: #5C0A1E;
+  text-decoration: underline;
+}
